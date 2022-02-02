@@ -79,30 +79,30 @@ main(){
 As **listas** no dart funcionam como um array, armazena dados que podem ser acessados por index
 
 ```dart
-List aprovados = ['Ana', 'Carlos', 'Daniel'];
-print(aprovados[0]); //Ana
+	List aprovados = ['Ana', 'Carlos', 'Daniel'];
+	print(aprovados[0]); //Ana
 ```
 
 Já o Map é como se fossem objetos contendo chave e valor
 
 ```dart
-var telefones = {
-'João': '+55 (11) 98765-4321',
-'Maria': '+55 (21) 12345-6789',
-}
+	var telefones = {
+	'João': '+55 (11) 98765-4321',
+	'Maria': '+55 (21) 12345-6789',
+	}
 
-print(telefones);
-print(telefones['joão']);
-print(telefones.values);
+	print(telefones);
+	print(telefones['joão']);
+	print(telefones.values);
 ```
 
 O Set funciona é conhecido como conjunto e ele não é indexado(não conseguimos acessar a partir do index)
 
 ```dart
-var times = {'Vasco', 'Flamengo', 'Fortaleza'};
-print(times.length);//3
-print(times.contains('Vasco'));//true
-times.add('Palmeiras')
+	var times = {'Vasco', 'Flamengo', 'Fortaleza'};
+	print(times.length);//3
+	print(times.contains('Vasco'));//true
+	times.add('Palmeiras')
 ```
 
 OBS: uma diferença importante entre a List e o Set, é que o Set não aceita repetição
@@ -110,10 +110,10 @@ OBS: uma diferença importante entre a List e o Set, é que o Set não aceita re
 ## 4. Notação ponto
 
 ```dart
-String s1 = "grazi suco";
-String s2 = s.substring(0,8);
-String s3 = s2.toUpperCase();
-String s4 = s3.padRight(15, "!");
+	String s1 = "grazi suco";
+	String s2 = s.substring(0,8);
+	String s3 = s2.toUpperCase();
+	String s4 = s3.padRight(15, "!");
 
 print(s4); 
 ```
@@ -121,11 +121,34 @@ print(s4);
  A partir de todo esse código, eu não precisaria declarar tantas variaveis, podemos apenas juntar os pontos:
  
  ```dart
- var s5 = "grazi suco".substring(0,8).toUpperCase().padRight(15, '!');
- print(s5);
+	 var s5 = "grazi suco".substring(0,8).toUpperCase().padRight(15, '!');
+	 print(s5);
  ```
-  
+## 5 Operadores  
 
+Operadores Aritméticos
+```dart
+	int a = 7;
+	int b = 3;
+	int resultado = a + b;
+
+	print(resultado);
+	print(a - b);
+	print(a * b);
+	print(a/b);
+	print(a % b);
+	print(a+(b*a)-(b/a));
+```
+Operadores Lógicos
+```dart
+	bool ehFragil = true;
+	bool ehCaro = false;
+
+	print(ehFragil && ehCaro);// E
+	print(ehFragil || ehCaro);// OU
+	print(ehFragil ˆ ehCaro); // OU Exclusivo(obrigatoriamente um dos dois tem que ser verdadeiro)
+	print(!ehCaro)//NÃO - Unário/Prefix
+```
 
 
 
