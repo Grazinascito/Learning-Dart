@@ -150,9 +150,120 @@ Operadores Lógicos
 	print(!ehCaro)//NÃO - Unário/Prefix
 ```
 
+Operadores de atribuição 
 
+```dart
+	int a = 2;
+	a = a + 3;
+	a += 3;
+	print(a); //8
+```
 
+Operadores Relacionais → o resultado é sempre booleano
+```dart
+	print(3 > 2); // true
+	print(3 >= 2); // true
+	print(10 <= 5); // false
+	print(3 == '3'); // false
+```
+# Estruturas de Controle ⚔️
+### IF/ELSE
 
+```dart
+	import "dart:math";
+
+	void main() {
+		var nota = Random().nextInt(11);
+
+	  if(nota >= 7){
+	    print("aprovado");
+	  }else{
+	    print("reprovado");
+	  }
+	}
+```
+
+### FOR
+
+```dart
+	for (int a = 0; a < 10; a++){
+		print("a = $a");
+	}
+
+	print("fim");
+```
+
+### FOR IN
+
+```dart
+	//retorna apenas o valor
+
+	var notas = [8.9, 9.3, 7.8, 6.9, 9.1];
+	for(var nota in notas){
+		print("O valor da nota é $nota.");
+	}
+
+	//O valor da nota é 8.9
+	//O valor da nota é 9.3
+	//O valor da nota é 7.8
+	// ...
+
+	//matriz
+
+	var coordenadas = [
+		[1,3],
+		[9,2],
+		[19, 23],
+		[2,14]
+	];
+
+	for(var coordenada in coordenadas){
+		for(var ponto in coordenada){
+			print("Valor do ponto é $ponto");
+		}
+	}
+```
+
+### FOR COM MAP
+
+```dart
+	Map<String, double> notas = {
+
+	    'João Pedro': 9.1,
+	    'Maria Augusta': 7.2,
+	    'Ana Silva': 6.4,
+	    'Roberto Andrade': 8.8,
+	  };
+
+	  for(String nome in notas.keys){
+	    print("Nome do aluno é $nome");
+	  }
+
+		for(double nota in notas.values){
+	    print("A nota é $nota");
+	  }
+
+		for(var registro in notas.entries){
+	    print("O ${registro.key} tem nota ${registro.value}");
+	  }
+  ```
+
+  ### WHILE
+  
+  ```dart
+	import "dart:math";
+	import "dart:io";
+
+	void main() {
+	  var resposta = '';
+
+	  while(resposta != "sair"){
+	    resposta = stdin.readLineSync().toString();
+	  }
+
+	  print(resposta);
+	}
+```
 
 
 
